@@ -1,6 +1,6 @@
 {
   "name": "heic-conversor",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Easily convert HEIC images to JPEG or PNG using this CLI",
   "license": "MIT",
   "keywords": [
