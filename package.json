@@ -1,0 +1,47 @@
+{
+  "name": "heic-conversor",
+  "version": "0.0.1",
+  "description": "Easily convert HEIC images to JPEG or PNG using this CLI",
+  "license": "MIT",
+  "keywords": [
+    "conversor",
+    "cli",
+    "file-converter",
+    "file-conversor",
+    "heic",
+    "png",
+    "jpg",
+    "jpeg"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vboechat/heic-conversor"
+  },
+  "author": {
+    "name": "Victor Ribeiro Boechat",
+    "email": "victor2005contato@proton.me",
+    "url": "https://www.vboechat.com.br"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "heic-conversor": "./dist/index.js"
+  },
+  "scripts": {
+    "postinstall": "ts-node ./src/postinstall.ts",
+    "build": "tsc",
+    "start": "ts-node ./src/index.ts"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "sharp": "^0.33.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
