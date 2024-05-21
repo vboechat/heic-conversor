@@ -13,6 +13,6 @@
     "declarationDir": "./dist",
     "emitDeclarationOnly": false,
   },
-  "include": ["src"],
+  "include": ["src", "src/postinstall.js"],
   "exclude": ["node_modules"]
 }

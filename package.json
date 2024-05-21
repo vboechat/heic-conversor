@@ -29,10 +29,11 @@
     "heic-conversor": "dist/index.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "src/postinstall.js"
   ],
   "scripts": {
-    "postinstall": "node ./src/postinstall.js",
+    "postinstall": "node ./dist/postinstall.js",
     "build": "tsc",
     "start": "ts-node ./src/index.ts"
   },
