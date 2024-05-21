@@ -2,12 +2,11 @@
 
 import { Command } from 'commander';
 import { convertImagesInFolder } from './conversors/conversor';
-import { getPackageVersion } from './lib/versioning';
 
 const program = new Command();
 
 program
-  .version(getPackageVersion())
+  .version("1.0.0")
   .description('Convert HEIC images to PNG or JPG')
   .requiredOption('-f, --format <type>', 'Output format (png or jpg)')
   .requiredOption('-p, --path <folder>', 'Path to the folder containing HEIC images')
