@@ -1,20 +1,21 @@
-import { execSync } from 'child_process';
-import { platform as _platform, arch as _arch } from 'os';
-import { handleError } from './lib/error-handler';
+const { execSync } = require('child_process');
+const { platform, arch } = require('os');
 
-const platform = _platform();
-const arch = _arch();
+const platformFunction = platform();
+const archFunction = arch();
 
-const lookupTable: { [key: string]: string } = {
+const lookupTable = {
   'win32-x64': 'npm install --os=win32 --cpu=x64 sharp',
   'linux-x64': 'npm install --os=linux --cpu=x64 sharp',
   'darwin-x64': 'npm install --os=darwin --cpu=x64 sharp'
 };
 
-const key = `${platform}-${arch}`;
+const key = `${platformFunction}-${archFunction}`;
 const command = lookupTable[key] || 'npm install sharp';
 
-handleError(() => {
+try {
   execSync(command, { stdio: 'inherit' });
   console.log('Sharp successfully installed.');
-});
+} catch (error) {
+  console.error('Error while installing Sharp:', error);
+}
