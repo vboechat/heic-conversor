@@ -33,7 +33,7 @@
     "src/postinstall.js"
   ],
   "scripts": {
-    "postinstall": "node ./dist/postinstall.js",
+    "postinstall": "node ./src/postinstall.js",
     "build": "tsc",
     "start": "ts-node ./src/index.ts"
   },
